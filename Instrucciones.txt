@@ -1,0 +1,4 @@
+1. creas la carpeta llamada"TP_2020-I" en tu disco.
+2. git init
+3. git clone https://github.com/Alvarod12345/TP_2020-I.git 
+4. Y ya puedes commitear lo que desees.
