@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 using DAO;
 using DTO;
 
-public partial class Login :  System.Web.UI.Page
+public partial class Login :  System.Web.UI.Page        
 {
     SqlConnection conexion;
     protected void Page_Load(object sender, EventArgs e)
@@ -32,15 +32,19 @@ public partial class Login :  System.Web.UI.Page
             if (registro.Read())
             {
                 var rol = registro["FK_ITU_Cod"].ToString();
-                if (rol == "1")
+                if (rol == "1")     /*cliente*/
                 {
                     Response.Redirect("MasterPage.aspx");
                 }
-                else if (rol == "2")
+                else if (rol == "2")   /*gerente*/
                 {
                     Response.Redirect("GestionCatalogo.aspx");
                 }
-                else if (rol == "3")
+                else if (rol == "3")     /*vendedor*/
+                {
+                    Response.Redirect("MasterPage.aspx");
+                }
+                else if (rol == "4")     /*trabajador*/
                 {
                     Response.Redirect("MasterPage.aspx");
                 }
